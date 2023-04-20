@@ -1,0 +1,287 @@
+<html>
+    <head>    
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            #map1 {
+            width: 50%;
+            height: auto;
+            fill: #ccc;
+            stroke: #333;
+            stroke-width: 2;
+            }
+            /* Slideshow container */
+            .slideshow-container 
+            {
+            max-width: 1100px;
+            position: relative;
+            margin-right: 100px;
+            margin-left: 260px;
+            margin-top: -80px;
+            }
+            /* Hide the images by default */
+            .mySlides {
+            display: none;
+            }
+            /* Next & previous buttons */
+            .prev, .next {
+            cursor: pointer;
+            position:absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 30px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            margin-left: 100px;
+            margin-left: -140px;
+            }
+            /* Position the "next button" to the right */
+            .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+            margin-right: 20px;
+            }
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+            }
+            /* Caption text */
+            .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            margin-left: -100px;
+            text-align: center;
+            }
+            /* Number text (1/3 etc) */
+            .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+            }
+            /* The dots/bullets/indicators */
+            .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 10px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            
+            }
+            .active, .dot:hover {
+            background-color: #542525;
+            }
+            /* Fading animation */
+            .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+            }
+            .text2
+            {
+              color: #000000;
+              size: 100px;
+              font-family:Georgia, 'Times New Roman', Times, serif;
+              margin-bottom: 100px;
+              text-align: center;
+            }
+            #navbar
+            {
+               background-color:rgb(38, 62, 150);
+               font-size: 24px; 
+               margin-top:-10px;
+               margin-right: -8px;
+               margin-left: -8px;
+               overflow:auto
+            }
+            .textRight
+            {
+                padding-left: 20px;
+                padding-top: 30px;
+                padding-right: 60px;
+                color: white;
+                float:right
+            }
+            #navbar a:hover
+            {
+                background-color: rgb(105, 140, 255);
+                padding-bottom: 32px;
+            }
+            #navbar img:hover
+            {
+                background-color: rgb(105, 140, 255);
+                padding-bottom: 3px;
+            }
+            #button1
+            {
+              display: none;
+            }
+            #map
+            {
+              
+              align-self: center;
+            }
+            .button 
+            {
+              border: none;
+              color: white;
+              padding: 20px 40px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              margin: 4px 2px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+            .button2 {
+              background-color: white; 
+              color: black; 
+              border: 2px solid #008CBA;
+              margin-left: 650px;
+              margin-top: 50px;
+            }
+
+            .button2:hover {
+              background-color: #008CBA;
+              color: white;
+            }
+            
+        </style>
+    
+                </div>
+          
+                <div id="navbar">
+                  <a href="imageCarousel.html"target="_blank">
+                  <img id="ucc" src="ucc.png" width="100" ></a>
+
+                <a class="textRight"href="view1.html"target="_blank"><i class="fa fa-tree"></i>Explore</a>
+                <a class="textRight"href="post.html"target="_blank"><i class="fa fa-fw fa-heart"></i>Post</a>
+                <a class="textRight"href="clubs1.html"target="_blank"><i class="fa-hourglass"></i>Clubs</a>
+                
+
+              </div>
+        <body style="background-color:lightskyblue ;">
+
+              <h1>
+                <div class = "text2">
+                  College Board | Share Your Experience
+                </div>
+              </h1>
+              
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="gym.jpeg" style="width:900px; height: 600px; text-align: center;">
+                      <div class="text" style="font-size: 40px; color: rgb(255, 255, 255);">Check out what UCC has to offer!</div>
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="school.jpeg" style="width:900px; height: 600px; text-align: center;">
+                      <div class="text" style="font-size: 40px; color: rgb(255, 255, 255);">Use CollegeBoard to record your memories!</div>
+                    </div>
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="ice.jpeg" style="width:900px; height: 600px; text-align: center;">
+                      <div class="text" style="font-size: 40px; color: rgb(255, 255, 255);">Explore our downtown campus!</div>
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  <!-- The dots/circles -->
+                  <div style="margin-left: 650px;">
+                    <span style="color: aqua;"class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                  </div>
+                <h1 p style="text-align: center;" >Interactive Maps</h1>
+                <p class = "text45" p style="text-align: center; font-size: 30px;" >Click on any location of the map to learn more</p> <br><br>
+                <img class= "map1" src="school.jpeg" usemap="#workmap" width = "880" height = "550" 
+                  p style ="text-align: center; margin-left: 280px;">
+                <map name = "workmap" >
+                  <area  class= "map1" shape ="poly" coords = "400, 180, 500, 150, 850, 300, 640, 360" alt = "Computer" href="field.html">
+                  <area  class= "map1" shape ="poly" coords = "180, 200, 293, 180, 580, 400, 500, 430" alt = "Computer" href="rink.html">
+                </map>
+                <br><br><br><br>
+                <h3 p style ="font-size:30px; text-align: center;">Main Building Locations</h3>
+                <br><br><br><br>
+                <img class= "map1" src="mainFloor.png" usemap="#workmap2" width = "880" height = "550" 
+                p style ="text-align: center; margin-left: 280px;">
+                <map name = "workmap2">
+                  <area class= "map1" shape ="rect" coords = "40, 100, 170, 240," alt = "gym" href="gym.html">
+                  <area class= "map1" shape ="rect" coords = "40, 250, 200, 300," alt = "gym" href="sas.html">
+                  <area class= "map1" shape ="rect" coords = "210, 280, 360, 380," alt = "gym" href="laidlaw.html">
+                  <area class= "map1" shape ="rect" coords = "280, 70, 430, 160," alt = "gym" href="old.html">
+                  <area class= "map1" shape ="rect" coords = "580, 200, 700, 270," alt = "gym" href="eat.html">
+                </map>
+                
+                <h2 >
+                  <div class="text2" style="margin-top: 50px;">
+                    Check out previous posts from UCC students
+                  </div>
+                </h2>
+              <div>
+                <a href="post1.html"><img src="gymL.jpeg" width="400" height="250"></a>
+                <a href="post2.html"><img src="field1.jpeg" width="400" height="250" style="margin-left: 100px;"></a>
+                <a href="post3.html"><img src="lab.jpeg" width="400" height="250" style="margin-left: 100px;"></a>
+                <br>
+                <div style="margin-left: 20px; font-size: 30px; font-style: bold;">
+                  My experience at the Lett Gym                                 
+                <div style="margin-left: 520px; font-size: 30px; font-style: bold; margin-top: -30px;">
+                  My soccer game at the oval
+                </div>
+                <div style="margin-left: 1000px; font-size: 30px; font-style: bold; margin-top: -40px;">
+                  My new design at the design lab
+                </div>
+                </div>
+              </div>
+                
+              <a href= "view1.html" class="button button2">View More</a>
+              <a href= "post.html" class="button button2">Create Post</a>
+              
+          </body>
+        </div>
+        <script type="text/javascript"> 
+        
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            // Next and previous controls
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
+            // Thumbnail image controls
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+            }
+
+        </script>
+    </head>
+</html>
+        

@@ -1,0 +1,31 @@
+<html>
+<body>
+
+<h1>Please Upload Your Image Here!</h1> 
+<style>
+    .button
+        {
+            background-color: rgb(116, 255, 151);
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+    .button2
+        {
+            background-color: rgb(142, 157, 255);
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+
+</style>
+<form action="/action.page.php">
+    <label p style="font-size: 25px" for = "img">Select a photo:</label>
+    <input type = "file" id="img" name = "img" class = "button2" accept="image/*">
+    <input type ="submit" value="Upload" class = "button" p style="font-size: 25px">
+
+</form>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<html>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+    .button
+        {
+            background-color: rgb(164, 252, 214);
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+    .buttonA
+        {
+            background-color: rgb(167, 167, 255);
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+
+    .button2
+        {
+            background-color: #ffffff;
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding-right: 100px;
+            padding-bottom: 200px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+        }
+    .button3
+        {
+            background-color: rgb(255, 255, 255);
+            border: none;
+            color:black;
+            font-size: 20px;
+            padding: 20px 40px;
+        }
+    .textStyle
+        {
+            font-size: 25px;
+        }
+    #navbar
+        {
+               background-color:rgb(38, 62, 150);
+               font-size: 24px; 
+               margin-top:-10px;
+               margin-right: -8px;
+               margin-left: -8px;
+               overflow:auto
+        }
+    #navbar a:hover
+        {
+                background-color: rgb(105, 140, 255);
+                padding-bottom: 32px;
+        }
+    #navbar img:hover
+        {
+                background-color: rgb(105, 140, 255);
+                padding-bottom: 3px;
+        }
+    .textRight
+            {
+                padding-left: 20px;
+                padding-top: 30px;
+                padding-right: 60px;
+                color: white;
+                float:right
+            }
+    .places 
+            {
+                width: 50px;
+            }
+</style>
+
+</div>
+          
+<div id="navbar">
+  <a href="imageCarousel.html"target="_blank">
+  <img id="ucc" src="ucc.png" width="100" ></a>
+
+<a class="textRight"href="view1.html"target="_blank"><i class="fa fa-tree"></i>Explore</a>
+<a class="textRight"href="post.html"target="_blank"><i class="fa fa-fw fa-heart"></i>Post</a>
+<a class="textRight"href="clubs1.html"target="_blank"><i class="fa-hourglass"></i>Clubs</a>
+
+</div>
+
+<body style="background-color:lightskyblue ;">
+
+    </style>
+    <form action="view.html" method="GET" enctype="multipart/form-data">
+        
+    <form action="view.html" p style="margin-top: 10px;"></form>
+        <h1>Please Upload The Description of Your Experience Here!</h1> 
+        <input id="inpKey" type="text" placeholder="Enter your name..."> <br><br>
+        <input id="inpValue" cols = "50" rows="4" type="text" placeholder="Describe your memorable experiences... " 
+        class = "button2" ></input><br><br>
+
+        <button p style= "font-size: 25px; background-color: aquamarine;" type = "button" id="btnInsert" >Post</button>
+        <br><br>
+        <input id="Key2" type="text" p style= "font-size: 25px;" placeholder="Enter the date..."> 
+        <select id="inpLocation" name="places" id="places" p style="font-size: 25px;">
+            <option value="Gym">Gym</option>
+            <option value="Soccer Field">Soccer Field</option>
+            <option value="Design Lab">Design Lab</option>
+            <option value="Dining Hall">Dining Hall</option>
+            <option value="Student Center">Student Center</option>
+            <option value="Rink">Rink</option>
+            <option value="Library">Library</option>
+          </select>
+        <br><br>
+
+        <button p style= "font-size: 25px; background-color: aquamarine;" type = "button" id="btn2">Post Date and Location</button>
+
+    </form>
+    <br><br>
+    <fieldset p style="color: blue;">
+        <legend>Your Post</legend>
+        <div id="Output">
+        </div>
+    </fieldset>
+
+    <button id="clear">
+        clear
+    </button>
+    </form> 
+</body>
+
+<p id = "demo"></p>
+<script type="text/javascript">
+  
+    const inpKey = document.getElementById("inpKey");
+    const inpValue = document.getElementById("inpValue");
+    const btnInsert = document.getElementById("btnInsert");
+
+
+    const Key2 = document.getElementById("Key2")
+    const inpLocation = document.getElementById("inpLocation");
+    const btn2 = document.getElementById("btn2")
+    
+    const Output = document.getElementById("Output")
+
+    btnInsert.onclick=function(){
+        const key = inpKey.value;
+        const value = inpValue.value;
+
+        console.log(key);
+        console.log(value);
+
+        if (key && value) {
+            localStorage.setItem(key, value);
+            location.reload();
+        }
+    }
+    
+    btn2.onclick=function(){
+        const key2 = Key2.value;
+        const loc = inpLocation.value;
+
+        console.log (key2);
+        console.log(loc);
+
+        if (key2 && loc) {
+            localStorage.setItem(key2, loc);
+            location.reload();
+        }
+
+    };
+
+    for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            const value = localStorage.getItem(key);
+            Output.innerHTML += `${key}: ${value} <br />`;
+    }
+
+    for (let x = 0; x < localStorage.length; x++) {
+            const key2 = localStorage.key(x);
+            const loc = localStorage.getItem(key2);
+            //Output.innerHTML += `${key2} at ${loc} <br />`;
+    }
+    
+
+    clear.onclick = function() {
+        localStorage.clear()
+        location.reload()
+    };
+
+</script>
+</html>
+

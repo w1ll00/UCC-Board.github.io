@@ -1,0 +1,24 @@
+<form action="submit.php" method="post">
+  Name: <input type="text" name="name"><br>
+  Email: <input type="email" name="email"><br>
+  Message: <textarea name="message"></textarea><br>
+  <input type="submit" value="Submit">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $name = $_POST["name"];
+  $email = $_POST["email"];
+  $message = $_POST["message"];
+
+  echo "Name: " . $name . "<br>";
+  echo "Email: " . $email . "<br>";
+  echo "Message: " . $message . "<br>";
+}
+?>
+This PHP code will retrieve the user input from the form, store it in variables, and then display it on the website. You can customize this code to suit your specific needs.
+
+
+
+
+
